@@ -1,0 +1,83 @@
+h1, h2, h3, h4, h5, h6, p {
+    margin-bottom: 0.5em;
+}
+
+.xs {
+    font-size: 22px;
+
+    @include media(w1024) {
+        
+    }
+}
+
+.s {
+    font-size: 30px;
+
+    @include media(w1024) {
+        font-size: 21px;
+    }
+
+    @include media(w768) {
+        font-size: 22px;
+    }
+}
+
+.m {
+    font-size: 40px;
+
+    @include media(w1024) {
+        font-size: 25px;
+    }
+
+    @include media(w768) {
+        font-size: 30px;
+    }
+}
+
+.l {
+    font-size: 51px;
+
+    @include media(w1024) {
+        font-size: 25px;
+    }
+
+    @include media(w768) {
+        font-size: 25px;
+    }
+}
+
+h1 {
+    font-size: 106px;
+
+    @include media(w1024) {
+        font-size: 55px;
+    }
+
+    @include media(w768) {
+        font-size: 38px;
+    }
+}
+
+h2 {
+    font-size: 74px;
+
+    @include media(w1024) {
+        font-size: 63px;
+    }
+
+    @include media(w768) {
+        font-size: 31px;
+    }
+}
+
+h3 {
+    font-size: 60px;
+
+    @include media(w1024) {
+        font-size: 50px;
+    }
+
+    @include media(w768) {
+        font-size: 22px;
+    }
+}

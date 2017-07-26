@@ -1,0 +1,134 @@
+.sec5 {
+    background-color: $main-blue-light;
+    z-index: 2;
+
+    &__container {
+        top: -8vw;
+
+        @include media(w1024) {
+            top: auto;
+        }
+
+        @include media(w768) {
+            text-align: center;
+        }
+    }
+    
+    &__bg {
+        fill: $main-blue-light;
+        position: absolute;
+        left: 0;
+        height: 16vw;
+        width: 100%;
+
+        &_top {
+            bottom: 100%;
+        }
+
+        &_bottom {
+            stroke-width: 1px;
+            stroke: $main-blue-light;
+            top: 100%;
+        }
+    }
+
+    &__subtitle {
+        //margin-top: -2em;
+
+        @include media(w768) {
+            
+            br {
+                display: none;
+            }
+        }
+    }
+
+    &__block {
+        background-color: $main-blue;
+        margin-bottom: 2em;
+        padding: 30px;
+
+        @include media(w1024) {
+            margin-left: -$container-side-padding-tablet;
+            margin-right: -$container-side-padding-tablet;
+        }
+
+        @include media(w768) {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+
+        @include media(w768) {
+            display: block;
+        }
+    }
+
+    &__list-item {
+        width: 25%;
+
+        @include media(w1024) {
+            
+            p {
+                font-size: 22px;
+            }
+        }
+
+        @include media(w768) {
+            margin-bottom: 40px;
+            width: auto;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__list-img-wrap {
+        display: inline-block;
+        position: relative;
+
+        &:hover {
+
+            .sec5__list-img {
+                //transform: scale(0.95);
+            }
+
+            .sec5__list-icon {
+                transform: translate(-50%,-50%) scale(1);
+            }
+        }
+    }
+
+    &__list-img {
+        transition: $trans;
+
+        @include media(w1024) {
+            max-width: 100px;
+        }
+    }
+
+    &__list-icon {
+        transition: $trans;
+        transform: translate(-50%,-50%) scale(0.9);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        @include media(w1024) {
+            max-width: 45%;
+        }
+    }
+
+    &__bottom-text {
+
+        @include media(w768) {
+            display: none;
+        }
+    }
+}

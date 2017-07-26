@@ -1,0 +1,43 @@
+.ta-center {
+    text-align: center;
+}
+
+.tt-uppercase {
+    text-transform: uppercase;
+}
+
+.color-white {
+    color: white;
+}
+
+.color-red {
+    color: $main-red;
+}
+
+.black {
+    font-weight: 800;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.thin {
+    font-weight: 200;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.mb0 {
+    margin-bottom: 0;
+}
+
+.mb1 {
+    margin-bottom: 1em;
+}
+
+.mb2 {
+    margin-bottom: 2em;
+}

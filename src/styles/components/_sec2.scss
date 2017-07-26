@@ -1,0 +1,142 @@
+.sec2 {
+    background-color: $main-blue;
+    padding: 50px 0 70px;
+    z-index: 1;
+
+    @include media(w1024) {
+        padding: 20px 0 50px;
+    }
+
+    &__title {
+        @include border-top(currentColor);
+
+        @include media(w768) {
+            margin-bottom: 1em;
+
+            br {
+                display: none;
+            }
+        }
+    }
+
+    &__row {
+        display: flex;
+        margin-bottom: 3em;
+
+        @include media(w768) {
+            display: block;
+        }
+    }
+
+    &__col {
+        position: relative;
+        width: 50%;
+
+        &_img {
+
+            @include media(w1024) {
+                width: 30%;
+            }
+
+            @include media(w768) {
+                text-align: center;
+            }
+        }
+
+        &_list {
+
+            @include media(w1024) {
+                padding-left: 40px;
+                width: 70%;
+            }
+
+            @include media(w768) {
+                padding-left: 30px;
+            }
+        }
+
+        @include media(w768) {
+            width: auto;
+        }
+    }
+
+    &__list-item {
+        margin-bottom: 3em;
+        position: relative;
+
+        &:before {
+            content: "";
+            transform: translateY(-50%);
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: -30px;
+            height: 8px;
+            width: 8px;
+
+            @include media(w1024) {
+                left: -20px;
+                height: 6px;
+                width: 6px;
+            }
+        }
+
+        @include media(w1024) {
+            margin-bottom: 2em;
+        }
+    }
+
+    &__img {
+        border-radius: 50%;
+        position: absolute;
+        bottom: 0;
+        max-width: 435px;
+        width: 100%;
+
+        @include media(w1024) {
+            transform: translateY(50%);
+            bottom: 50%;
+        }
+
+        @include media(w768) {
+            transform: translate(0,0);
+            margin-bottom: 2em;
+            position: static;
+            width: 90%;
+        }
+    }
+
+    &__note {
+        background-color: white;
+        color: black;
+        font-size: 40px;
+        display: flex;
+        align-items: center;
+        padding: 30px 20px 30px 90px;
+
+        @include media(w1024) {
+            font-size: 22px;
+            padding: 20px 10px 20px 50px;
+        }
+
+        @include media(w768) {
+            display: block;
+            font-size: 20px;
+            text-align: center;
+            padding: 20px 10px;
+        }
+    }
+
+    &__note-icon {
+        margin-right: 50px;
+
+        @include media(w1024) {
+            margin-right: 30px;
+        }
+
+        @include media(w768) {
+            margin: 0 0 20px;
+        }
+    }
+}

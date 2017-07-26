@@ -1,0 +1,160 @@
+button {
+    border: none;
+    white-space: nowrap;
+
+    &.btn-round {
+        outline: none;
+    }
+}
+
+a {
+
+    &.btn-round {
+        display: inline-flex;
+        align-items: center;
+    }
+}
+
+.btn-round {
+    transition: $trans;
+    background-color: $main-red-dark;
+    border-radius: $btn-height-pc / 2;
+    border-radius: calc(#{$btn-height-pc} / 2);
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    font-size: $btn-font-size-pc;
+    text-align: center;
+    text-decoration: none;
+    padding: 0 80px;
+    position: relative;
+    height: $btn-height-pc;
+    z-index: 1;
+
+    @include media (w1024) {
+        border-radius: $btn-height-tablet / 2;
+        border-radius: calc(#{$btn-height-tablet} / 2);
+        font-size: $btn-font-size-tablet;
+        height: $btn-height-tablet;
+    }
+
+    @include media (w768) {
+        border-radius: $btn-height-mobile / 2;
+        border-radius: calc(#{$btn-height-mobile} / 2);
+        font-size: $btn-font-size-mobile;
+        padding: 0 20px;
+        height: $btn-height-mobile;
+        width: 100%;
+    }
+
+    &__inner {
+        transition: $trans;
+        background-color: $main-red;
+        border-radius: $btn-height-pc / 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: -4px;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    &__img {
+        margin-left: 30px;
+
+        @include media(w1024) {
+            margin-left: 15px;
+            max-width: 20px;
+        }
+    }
+
+    &:active {
+        
+        .btn-round__inner {
+            transform: translateY(4px)
+        }
+    }
+
+    &_download {
+        background-image: url("../img/icon-download.svg");
+        background-position: right 35px center;
+        background-repeat: no-repeat;
+        background-size: 50px;
+        padding-right: 100px;
+        position: relative;
+
+        &:after {
+            content: "PDF, 20Mb";
+            font-size: 30px;
+            position: absolute;
+            left: calc(100% + 20px);
+            white-space: nowrap;
+
+            @include media (w1024) {
+                font-size: 18px;
+            }
+
+            @include media (w768) {
+                content: none;
+            }
+        }
+
+        @include media (w768) {
+            background-position: right 10px center;
+            background-size: 30px;
+            padding-right: 50px;
+        }
+    }
+
+    &_download-column {
+        margin-bottom: 50px;
+
+        &:after {
+            transform: translateX(-50%);
+            position: absolute;
+            left: 50%;
+            top: calc(100% + 10px);
+        }
+    }
+
+    &_clear {
+        
+        &:after {
+            content: none;
+        }
+    }
+
+    &_link {
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    &:hover {
+
+        .btn-round__inner {
+            background-color: lighten($main-red, 5%);
+        }
+    }
+}
+
+@keyframes btnAnimRed {
+    from {
+        box-shadow: 0 0 8px 6px $btn-main-bg, 0 0 12px 14px $btn-main-bg;
+    }
+    to {
+        box-shadow: 0 0 18px 6px rgba(255, 48, 26, 0), 0 0 4px 71px rgba(255, 48, 26, 0);
+    }
+}
+
+@keyframes btnAnimWhite {
+    from {
+        box-shadow: 0 0 8px 6px white, 0 0 12px 14px white;
+    }
+    to {
+        box-shadow: 0 0 18px 6px rgba(255, 48, 26, 0), 0 0 4px 71px rgba(255, 48, 26, 0);
+    }
+}

@@ -1,0 +1,99 @@
+.thanks {
+    overflow: hidden;
+    z-index: 1;
+    //padding-bottom: 160px;
+
+    @include media(w1024) {
+        //padding-bottom: 200px;
+    }
+
+    &__text {
+        width: 50%;
+
+        @include media(w1024) {
+            text-align: center;
+            width: auto;
+        }
+    }
+
+    &__heading {
+        border-bottom: 4px solid black;
+        color: $main-red;
+        font-weight: bold;
+        font-size: 60px;
+        padding-bottom: 0.4em;
+
+        @include media(w1024) {
+            font-size: 50px;
+        }
+
+        @include media(w768) {
+            border: none;
+            font-size: 40px;
+        }
+    }
+
+    &__title {
+        font-size: 32px;
+        font-style: italic;
+        margin-bottom: 1em;
+
+        @include media(w1024) {
+            font-size: 22px;
+        }
+
+        @include media(w768) {
+            font-size: 18px;
+        }
+    }
+
+    &__subtitle {
+        font-size: 35px;
+        font-style: italic;
+        margin-bottom: 2em;
+
+        @include media(w1024) {
+            font-size: 25px;
+        }
+
+        @include media(w768) {
+            font-size: 20px;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        flex-flow: column;
+        max-width: 460px;
+        width: 100%;
+
+        @include media(w768) {
+            flex-direction: column;
+        }
+    }
+
+    &__buttons-link {
+        color: white;
+        font-size: 30px;
+        margin-bottom: 20px;
+
+        @include media(w768) {
+            font-size: 20px;
+        }
+    }
+
+    &__btn {
+        justify-content: center;
+    }
+
+    &__car {
+
+        @include media(w1280) {
+            left: 50%;
+        }
+
+        @include media(w1024) {
+            bottom: 0;
+        }
+    }
+}

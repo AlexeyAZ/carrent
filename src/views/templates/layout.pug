@@ -1,0 +1,26 @@
+doctype html
+
+- var title = 'Project title';
+- var phone = "8 910 946 32 86";
+- var attrPhone = "89109463286";
+
+block vars
+    
+html.loading
+    head
+        meta(charset="utf-8")
+        meta(name="description", content="")
+        meta(name="viewport", content="width=device-width, initial-scale=1, minimal-ui")
+        title #{title}
+        link(rel="icon" type="image/png" href="img/favicon.png" sizes="16x16")
+        link(rel="stylesheet", href="styles/vendor.css")
+        link(rel="stylesheet", href="styles/main.css")
+        block scripts
+    body
+        include ../components/mixins
+        include ../components/svg
+        include ../components/preloader
+        block content
+        include ../components/footer
+        script(src="scripts/vendor.js")
+        script(src="scripts/app.js")

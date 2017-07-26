@@ -1,0 +1,12 @@
+div#bottomFormContainer.bottom-form-container
+    div.bottom-form__content
+        p.s.bottom-form__title.
+            Проверьте, не занят ли ваш город одним из наших партнёров:
+        form(data-next="#bigForm")#bottomForm.bottom-form
+            label.bottom-form__label
+                input(type="text" name="city" placeholder="Ваш город" required).input.bottom-form__input
+            label.bottom-form__label
+                input(type="text" name="phone" placeholder="Телефон" required).input.bottom-form__input
+            label.bottom-form__label
+                input(type="email" name="email" placeholder="E-mail" required).input.bottom-form__input
+            +button("Проверить", true)(class="bottom-form__btn")

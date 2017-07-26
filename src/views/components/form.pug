@@ -1,0 +1,60 @@
+div.form-wrap.form-wrap_small
+    div#smallFormContainer.form-container
+        div.form__close
+        p.form__heading.
+            Оставьте заявку на презентацию франшизы
+        form#smallForm.form(data-next="#bigForm")
+            input(type="text" name="name" placeholder="Ваше имя" required="").form__input
+            input(type="text" name="phone" placeholder="Ваш телефон" required="").form__input
+            input(type="email" name="email" placeholder="Ваш email" required="").form__input
+            +button("Скачать", true)(class="form__btn form__btn_size")
+            //button.btn-round.form__btn.form__btn_size.js-big-btn.
+                Скачать
+div.form-wrap.form-wrap_big
+    div#bigFormContainer.form-container
+        div.form__close
+        p.form__title.
+            Спасибо!
+        p.form__descr.
+            В ближайшее время мы обработаем Вашу заявку. Для того, чтобы наш специалист мог максимально подробно ответить на все Ваши вопросы, заполните, пожалуйста, следующую форму. Заранее благодарим
+        form(method="POST")#bigForm.form
+            input(type="hidden" name="name1").js-hidden-name
+            input(type="hidden" name="phone1").js-hidden-phone
+            input(type="hidden" name="email1").js-hidden-email
+            label.form__label
+                span.
+                    Введите Ваш город
+                input(type="text" name="city" placeholder="" required="").form__input
+            label.form__label
+                span.
+                    Введите Ваш возраст
+                input(type="text" name="age" placeholder="" required="").form__input
+            label.form__label
+                span.
+                    Наличие бизнеса / Опыт бизнеса
+                select(name="business").form__select
+                    option(value="yes").
+                        Да
+                    option(value="no").
+                        Нет
+            label.form__label
+                span.
+                    Объем планируемых инвестиций
+                select(name="volume").form__select
+                    option(value="100 000 - 250 000").
+                        100 000 - 250 000 рублей
+                    option(value="250 000 - 500 000").
+                        250 000 - 500 000 рублей
+                    option(value="500 000 - 750 000").
+                        500 000 - 750 000 рублей
+                    option(value="750 000 - 1 000 000").
+                        750 000 - 1 000 000 рублей
+                    option(value="1 000 000 - 1 500 000").
+                        1 000 000 - 1 500 000 рублей
+                    option(value="1 500 000 - 3 000 000").
+                        1 500 000 - 3 000 000 рублей
+                    option(value="3 000 000").
+                        Более 3 000 000 рублей
+            +button("Проверить", true)(class="form__btn form__btn_center")
+            //button.btn-round.form__btn.form__btn_center.
+                Получить предложение

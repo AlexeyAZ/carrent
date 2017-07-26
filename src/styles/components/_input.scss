@@ -1,0 +1,74 @@
+.input {
+    @include placeholder {
+        color: $main-gray-darken;
+    }
+    background-color: $main-gray-lighten;
+    background-repeat: no-repeat;
+    border-radius: calc(#{$btn-height-pc} / 2);
+    border: 2px solid white;
+    outline: none;
+    display: inline-block;
+    color: black;
+    font-family: "PFHandBookPro", sans-serif;
+    font-weight: 200;
+    font-size: $input-font-size-pc;
+    padding: 0 35px;
+    height: $btn-height-pc;
+    width: 100%;
+
+    @include media (w1024) {
+        border-radius: calc(#{$btn-height-tablet} / 2);
+        padding: 0 25px;
+        font-size: $input-font-size-tablet;
+        height: $btn-height-tablet;
+    }
+
+    @include media (w768) {
+        border-radius: calc(#{$btn-height-mobile} / 2);
+        font-size: $input-font-size-mobile;
+        padding: 0 20px;
+        height: $btn-height-mobile;
+    }
+
+    &_city {
+        background-image: url("../img/input-map.png");
+        background-position: 20px center;
+        padding-left: 60px;
+    }
+
+    &_phone {
+        background-image: url("../img/input-phone.png");
+        background-position: 20px center;
+        padding-left: 55px;
+    }
+}
+
+.select {
+    background-color: white;
+    background-repeat: no-repeat;
+    border-radius: $btn-height-pc / 2;
+    border-radius: calc(#{$btn-height-pc} / 2);
+    border: 2px solid #d7d7d7;
+    outline: none;
+    display: inline-block;
+    color: #6b6b6b;
+    font-family: "PFHandBookPro", sans-serif;
+    font-size: $input-font-size-pc;
+    padding: 0 35px;
+    height: $btn-height-pc;
+
+    @include media (w1024) {
+        border-radius: $btn-height-tablet / 2;
+        border-radius: calc(#{$btn-height-tablet} / 2);
+        font-size: $input-font-size-tablet;
+        height: $btn-height-tablet;
+    }
+
+    @include media (w768) {
+        border-radius: $btn-height-mobile / 2;
+        border-radius: calc(#{$btn-height-mobile} / 2);
+        font-size: $input-font-size-mobile;
+        padding: 0 20px;
+        height: $btn-height-mobile;
+    }
+}

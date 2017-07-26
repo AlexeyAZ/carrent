@@ -1,0 +1,23 @@
+- var sec5List = ["бизнес-план", "юридические документы", "реклама", "помощь в выборе помещения и покупке автомобилей"]
+
+section.sec.sec5
+    svg(viewBox="0 0 100 100" preserveAspectRatio="none").sec5__bg.sec5__bg_top
+        path(d="M 0,0 L 100,100 0,100 z")
+    svg(viewBox="0 0 100 100" preserveAspectRatio="none").sec5__bg.sec5__bg_bottom
+        path(d="M 0,0 L 100,0 100,100 z")
+    div.container.color-white.sec5__container
+        p.m.italic.mb1.sec5__subtitle.
+            Во франшизу включено всё,<br> что потребуется для старта: 
+        div.sec5__block
+            div.sec5__list
+                each item, index in sec5List
+                    div.sec5__list-item
+                        div.sec5__list-img-wrap
+                            img(src="img/sec5-img" + (index + 1) + ".png", alt="").sec5__list-img
+                            img(src="img/sec5-icon" + (index + 1) + ".svg", alt="").sec5__list-icon
+                        p.m.italic.mb0.
+                            #{item}
+        div.ta-center
+            p.m.bold.ta-center.mb1.sec5__bottom-text.
+                А также исключительная поддержка<br> на протяжении всего срока сотрудничества!
+            +button("Скачать презентацию", false)

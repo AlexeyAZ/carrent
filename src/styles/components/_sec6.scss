@@ -1,0 +1,193 @@
+.sec6 {
+
+    @include media(w1024) {
+        padding-bottom: 8vw;
+    }
+
+    @include media(w768) {
+        padding-bottom: 16vw;
+    }
+
+    &__decor {
+        position: absolute;
+        top: -10%;
+        left: 60%;
+        height: 120%;
+
+        @include media(w1024) {
+            left: 50%;
+        }
+
+        @include media(w768) {
+            transform: translateY(-50%);
+            margin-bottom: 30px;
+            top: auto;
+            left: auto;
+            height: auto;
+            width: 160%;
+        }
+    }
+
+    &__car {
+        transition: 1.4s ease-out;
+        transform: translateX(-40%);
+        display: block;
+        margin-bottom: 4em;
+        position: relative;
+        z-index: 2;
+
+        @include media(w1024) {
+            right: 30vw;
+        }
+
+        @include media(w768) {
+            margin-bottom: 30px;
+            right: 20vw;
+            max-width: 110%;
+        }
+
+        &_move {
+            transform: translateX(0);
+        }
+    }
+    
+    &__subtitle {
+
+        @include border-top-bottom(currentColor);
+    }
+
+    &__row {
+        display: flex;
+
+        @include media(w768) {
+            display: block;
+        }
+    }
+
+    &__row-item {
+        position: relative;
+        width: 50%;
+
+        &_text {
+
+            @include media(w1024) {
+                width: 70%;
+            }
+
+            @include media(w768) {
+                text-align: center;
+                width: auto;
+            }
+
+            h2, p {
+
+                @include media(w768) {
+                    text-align: left;
+                }
+            }
+        }
+
+        &_img {
+
+            @include media(w1024) {
+                width: 30%;
+            }
+
+            @include media(w768) {
+                display: none;
+            }
+        }
+    }
+
+    &__text {
+        margin-bottom: 2em;
+
+        @include media(w768) {
+            font-size: 20px;
+            margin-bottom: 1em;
+        }
+    }
+
+    &__note {
+        @include border-top(currentColor);
+        
+        padding-bottom: 2em;
+
+        @include media(w768) {
+            display: block;
+        }
+    }
+
+    &__img {
+        border-radius: 50%;
+
+        @include media(w1024) {
+            max-width: 330px;
+            width: 100%;
+        }
+
+        @include media(w768) {
+            max-width: 300px;
+        }
+    }
+
+    &__img-wrap {
+        display: inline-block;
+        position: relative;
+
+        &_pc {
+
+            @include media(w768) {
+                display: none;
+            }
+        }
+
+        &_mobile {
+            display: none;
+
+            @include media(w768) {
+                display: inline-block;
+            }
+        }
+
+        @include media(w1024) {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @include media(w768) {
+            margin-bottom: 20px;
+            position: relative;
+            right: auto;
+            bottom: auto;
+            width: auto;
+        }
+    }
+
+    &__img-text {
+        transform: translate(-40%,-45%);
+        color: $main-red;
+        font-family: "Pobeda", Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 319px;
+        opacity: 0.4;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        @include media(w1024) {
+            font-size: 200px;
+        }
+    }
+
+    &__bg {
+        fill: red;
+        position: relative;
+        // top: 100%;
+        height: 16vw;
+        width: 100%;
+        z-index: 2;
+    }
+}

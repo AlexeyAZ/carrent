@@ -1,0 +1,76 @@
+.sec4 {
+    background-image: url("../img/sec4-bg.jpg");
+    background-color: $main-blue;
+    z-index: 2;
+
+    &__top {
+        padding: 60px 0 120px;
+
+        @include media(w1024) {
+            padding: 40px 0 80px;
+        }
+
+        @include media(w768) {
+            padding: 30px 0 80px;
+        }
+    }
+
+    &__subtitle {
+        
+        @include border-bottom(currentColor);
+
+        @include media(w768) {
+            
+            br {
+                display: none;
+            }
+        }
+    }
+
+    &__banner {
+        background-color: white;
+        color: $main-red-darkest;
+        line-height: 1;
+        text-align: center;
+        margin-bottom: 30px;
+        padding: 20px 50px;
+
+        @include media(w1024) {
+            margin-left: -$container-side-padding-tablet;
+            margin-right: -$container-side-padding-tablet;
+            padding: 20px 30px;
+        }
+
+        @include media(w768) {
+            padding: 30px 10px;
+        }
+    }
+
+    &__banner-text {
+
+        @include media(w1024) {
+            font-size: 40px;
+        }
+
+        @include media(w768) {
+            font-size: 30px;
+        }
+    }
+
+    &__note {
+        text-align: right;
+    }
+
+    &__note-sum {
+
+        @include media(w768) {
+            font-weight: bold;
+            line-height: 1.8;
+        }
+    }
+
+    &__bottom {
+        background-color: $main-blue;
+        height: 8vw;
+    }
+}

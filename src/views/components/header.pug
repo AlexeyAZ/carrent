@@ -1,0 +1,14 @@
+header.header
+    div.container.header__container
+        div.header__item.header__item_descr
+            p.header__title.
+                Бизнес на аренде автомобилей<br> со средней выручкой 1,9 млн руб/год
+        div.header__item.header__item_logo
+            a(href="/").header__logo
+                svg.header__logo-img
+                    use(xlink:href="#header-logo")
+        div.header__item.header__item_contacts
+            a(href="tel:" + attrPhone)&attributes({'data-phone': attrPhone}).header__link.phone.phone_white.
+                #{phone}
+            a(href="").header__link.link.link_getcall.js-small-btn.
+                Заказать звонок

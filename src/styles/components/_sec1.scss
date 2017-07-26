@@ -1,0 +1,134 @@
+.sec1 {
+    padding-bottom: 220px;
+
+    @include media(w1024) {
+        padding-bottom: 150px;
+    }
+
+    @include media(w768) {
+        text-align: center;
+        padding-bottom: 140px;
+    }
+
+    &__title {
+
+        @include border-bottom(black);
+    }
+    
+    &__heading {
+        color: $main-red;
+        font-weight: 800;
+        line-height: 1;
+        margin-bottom: 20px;
+    }
+
+    &__subtitle {
+        margin-bottom: 2.5em;
+
+        @include media(w1024) {
+            margin-bottom: 4em;
+        }
+
+        @include media(w768) {
+            margin-bottom: 2em;
+        }
+    }
+
+    &__car {
+        transform: translate(30%, -30%);
+        transition: 1s;
+        opacity: 0.9;
+        position: absolute;
+        bottom: 0;
+        left: 42%;
+        max-width: 1050px;
+        z-index: 2;
+
+        @include media(w1024) {
+            bottom: -70px;
+            max-width: 700px;
+        }
+
+        @include media(w768) {
+            display: none;
+        }
+
+        &_move {
+            transform: translate(0,0);
+            opacity: 1;
+        }
+    }
+
+    &__decor {
+        position: absolute;
+        top: 0;
+        z-index: -3;
+
+        &_left {
+            right: 60%;
+
+            @include media(w1024) {
+                max-height: 140%;
+            }
+
+            @include media(w768) {
+                transform: translateX(50%);
+                right: 50%;
+            }
+        }
+
+        &_right {
+            left: 70%;
+
+            @include media(w1024) {
+                display: none;
+            }
+        }
+    }
+
+    &__bottom-decor {
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 14vw;
+        width: 100%;
+        min-height: 70px;
+        z-index: -2;
+    }
+
+    &__bottom-svg {
+        display: block;
+        stroke-width: 1px;
+        position: absolute;
+        left: 0;
+
+        &_small {
+            stroke: $main-blue-light;
+            fill: $main-blue-light;
+            top: 15%;
+            bottom: 0;
+            height: 100%;
+            width: 50%;
+
+            @include media(w1024) {
+                top: 0;
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        &_big {
+            stroke: $main-blue;
+            fill: $main-blue;
+            top: 0;
+            height: 100%;
+            width: 100%;
+
+            @include media(w1024) {
+                // top: 20px;
+                // height: calc(100% - 10px);
+            }
+        }
+    }
+}

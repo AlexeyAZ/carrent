@@ -1,0 +1,143 @@
+@mixin media($media) {
+
+    @if $media == w1366 {
+        @media only screen and (max-width: 1366px) { @content; }
+    }
+
+    @else if $media == w1280 {
+        @media only screen and (max-width: 1280px) { @content; }
+    }
+
+    @else if $media == w1024 {
+        @media only screen and (max-width: 1024px) { @content; }
+    }
+
+    @else if $media == w768 {
+        @media only screen and (max-width: 768px) { @content; }
+    }
+
+    @else if $media == w600 {
+        @media only screen and (max-width: 600px) { @content; }
+    }
+
+    @else if $media == w500 {
+        @media only screen and (max-width: 500px) { @content; }
+    }
+
+    @else if $media == w400 {
+        @media only screen and (max-width: 400px) { @content; }
+    }
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder {
+        @content;
+    }
+
+    &::-moz-placeholder {
+        @content;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+}
+
+@mixin border-bottom($color) {
+    display: inline-block;
+    padding-bottom: 0.5em;
+    position: relative;
+
+    &:after {
+        content: "";
+        background-color: currentColor;
+        border-radius: 3px;
+        color: $color;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: $border-width-pc;
+        width: calc(100% + 40px);
+
+        @include media(w1024) {
+            border-radius: 2px;
+            height: $border-width-tablet;
+        }
+
+        @include media(w768) {
+            border-radius: 1px;
+            height: $border-width-mobile;
+            left: 5%;
+            width: 90%;
+        }
+    }
+}
+
+@mixin border-top($color) {
+    display: inline-block;
+    padding-top: 1em;
+    position: relative;
+
+    &:after {
+        content: "";
+        background-color: currentColor;
+        border-radius: 3px;
+        color: $color;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: $border-width-pc;
+        width: 40%;
+
+        @include media(w1024) {
+            border-radius: 2px;
+            height: $border-width-tablet;
+        }
+
+        @include media(w768) {
+            border-radius: 1px;
+            height: $border-width-mobile;
+        }
+    }
+}
+
+@mixin border-top-bottom($color) {
+    display: inline-block;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    position: relative;
+
+    &:before,
+    &:after {
+        content: "";
+        background-color: currentColor;
+        border-radius: 3px;
+        color: $color;
+        position: absolute;
+        left: 0;
+        height: $border-width-pc;
+        width: 100%;
+
+        @include media(w1024) {
+            border-radius: 2px;
+            height: $border-width-tablet;
+        }
+
+        @include media(w768) {
+            border-radius: 1px;
+            height: $border-width-mobile;
+        }
+    }
+
+    &:before {
+        top: 0;
+    }
+
+    &:after {
+        bottom: 0;
+    }
+}

@@ -1,0 +1,33 @@
+footer.footer
+    div.container.footer__container
+        div.footer__block.footer__block_social
+            p.footer__text.footer__text_copy.
+                © 2017, “АВТОПРОКАТ”
+            //div.footer__social
+                p.footer__text.footer__text_social-title.
+                    Мы в соц. сетях
+                ul.footer__social-list
+                    li.footer__social-item
+                        a(href="https://vk.com/autoprokat1" target="_blank").footer__link.footer__link_social
+                            i.fa.fa-vk
+                    li.footer__social-item
+                        a(href="https://plus.google.com/communities/102437744496240211521" target="_blank").footer__link.footer__link_social
+                            i.fa.fa-google-plus-official
+                    //li.footer__social-item
+                        a(href="" target="_blank").footer__link.footer__link_social
+                            i.fa.fa-tripadvisor
+        div.footer__block.footer__block_contacts
+            p.footer__text.footer__text_adress.
+                г. Тула ул. Фрунзе, 3, оф 413
+            div.footer__contacts
+                a(href="doc/politic.pdf" target="_blank").footer__text.footer__link.footer__link_politic.
+                    Политика конфиденциальности
+                //p.footer__text
+                    |e-mail:
+                    a(href="mailto:uno@uno-perm.ru").footer__link.
+                        uno@uno-perm.ru
+        div.footer__block.footer__block_feedback
+            a(href="tel:" + attrPhone)&attributes({'data-phone': attrPhone}).footer__phone.
+                #{phone}
+            a().footer__link.footer__link_getcall.js-small-btn.
+                Заказать звонок

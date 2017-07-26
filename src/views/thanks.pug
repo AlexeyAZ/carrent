@@ -1,0 +1,40 @@
+extends templates/layout
+
+block vars
+    - var title = 'Автопрокат'
+
+block content
+    include components/form
+    section.sec.thanks
+        include components/header
+        div.container
+            div.thanks__text
+                p.thanks__heading.
+                    <span id="thanksName"></span> менеджеры уже занимаются вашей заявкой
+                p.thanks__title.
+                    Мы свяжемся с Вами в ближайшее время
+                p.thanks__subtitle.
+                    График работы с 9.00 до 23.00<br> Поэтому, если вы оставили заявку<br> в нерабочее время, мы перезвоним<br> вам на следующий рабочий день
+                div.thanks__buttons
+                    +link("Скачать презентацию", true)(class="thanks__buttons-link" href="doc/mk.pdf" target="_blank")
+                    +link("Вернуться на сайт", true)(class="thanks__buttons-link" href="/index.html")
+        img(src="img/sec1-car.png", alt="").sec1__car.thanks__car
+        img(src="img/decor-circles1.png", alt="").sec1__decor.sec1__decor_left
+        img(src="img/decor-circles2.png", alt="").sec1__decor.sec1__decor_right
+        div.sec1__bottom-decor
+            svg(viewBox="0 0 100 100" preserveAspectRatio="none").sec1__bottom-svg.sec1__bottom-svg_big
+                path(d="M 0,100 L 100,0 100,100 z" stroke-width="0")
+
+
+        //div.container
+            p.thanks__heading.
+                <span id="thanksName"></span> менеджеры уже занимаются вашей заявкой
+            p.thanks__title.
+                Мы свяжемся с Вами в ближайшее время
+            div.thanks__buttons
+                a(href="doc/mk.pdf" target="_blank").btn-round.btn-round_download.
+                    Открыть презентацию
+                a(href="/index.html").thanks__links-link.
+                    Вернуться на сайт
+            p.thanks__subtitle.
+                График работы с 9.00 до 23.00 Поэтому, если вы оставили заявку в нерабочее время, мы перезвоним вам на следующий рабочий день

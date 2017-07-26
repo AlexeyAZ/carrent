@@ -1,0 +1,14 @@
+.phone {
+    font-family: "Pobeda", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 45px;
+    text-decoration: none;
+
+    @include media(w1024) {
+        font-size: 28px;
+    }
+
+    @include media(w768) {
+        font-size: 22px;
+    }
+}

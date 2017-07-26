@@ -1,0 +1,220 @@
+.footer {
+	background-color: $footer-bg;
+    color: $footer-text;
+    font-size: 20px;
+    padding: 35px 0 30px;
+
+    @include media(w1024) {
+        font-size: 20px;
+        padding: 30px 0 40px;
+    }
+
+    @include media(w768) {
+        background-color: $main-gray-lighten;
+        font-size: 15px;
+        padding: 25px 0 20px;
+    }
+
+    &_bg_blue {
+        background-color: $main-blue !important;
+        color: white;
+
+        .footer__phone {
+            color: white;
+
+            &:hover {
+                color: $main-red;
+            }
+        }
+
+        .footer__link {
+            color: white;
+
+            &:hover {
+                color: $main-red;
+            }
+        }
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        @include media(w1024) {
+            flex-flow: column;
+            align-items: center;
+        }
+    }
+
+    &__block {
+        display: flex;
+
+        &_social {
+            flex-direction: column;
+            
+            @include media(w1024) {
+                justify-content: space-between;
+                align-items: center;
+                //order: 3;
+                width: 100%;
+            }
+
+            @include media(w768) {
+                flex-direction: column;
+                margin-top: 0;
+            }
+        }
+
+        &_contacts {
+            flex-direction: column;
+
+            @include media(w1024) {
+                //order: 1;
+            }
+
+            @include media(w768) {
+                align-items: center;
+                //order: 2;
+            }
+        }
+
+        &_feedback {
+            flex-direction: column;
+            align-items: flex-end;
+
+            @include media(w1024) {
+                align-items: center;
+            }
+
+            @include media(w768) {
+                align-items: center;
+                //order: 1;
+            }
+        }
+
+        @include media(w1024) {
+            margin-bottom: 10px;
+            //width: 100%;
+        }
+    }
+
+    &__text {
+        margin-bottom: 0;
+        line-height: 1.4;
+
+        &_copy {
+
+        }
+
+        &_social-title {
+            margin-right: 10px;
+        }
+
+        &_adress {
+            text-align: center;
+
+            @include media(w1024) {
+                text-align: left;
+            }
+
+            @include media(w768) {
+                text-align: center;
+            }
+        }
+
+        @include media(w1024) {
+            line-height: 2;
+        }
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+    }
+
+    &__social-list {
+        display: flex;
+    }
+
+    &__social-item {
+        //background-color: #9a9a9a;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        margin-right: 8px;
+    }
+    
+    &__link {
+        transition: $trans;
+        border-bottom: 1px solid transparent;
+        cursor: pointer;
+        color: $footer-text;
+        text-decoration: none;
+
+        &:hover {
+            border-color: currentColor;
+        }
+
+        &_social {
+            border: none;
+            //color: white;
+        }
+
+        &_politic {
+            border-bottom: 1px solid currentColor;
+            //margin-left: 30px;
+
+            @include media(w1024) {
+                //margin-left: 10px;
+            }
+
+            @include media(w768) {
+                //margin-right: 0;
+            }
+        }
+
+        &_getcall {
+            border-bottom: 1px solid currentColor;
+            font-size: 20px;
+
+            @include media(w768) {
+                font-size: 13px;
+            }
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        justify-content: center;
+
+        @include media(w768) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        p {
+            order: -10;
+        }
+    }
+
+    &__phone {
+        font-size: 23px;
+        transition: $trans;
+        color: $footer-text;
+        line-height: 1;
+        text-decoration: none;
+
+        @include media(w1024) {
+            font-size: 23px;
+            margin-bottom: 10px;
+        }
+
+        @include media(w768) {
+            font-size: 15px;
+        }
+    }
+}

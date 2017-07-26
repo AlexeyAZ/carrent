@@ -1,0 +1,22 @@
+mixin button(text, openWindow)
+    -if (openWindow === false || openWindow === "") {
+        button.btn-round.js-small-btn&attributes(attributes)
+            |#{text}
+            span.btn-round__inner
+                |#{text}
+                img(src="img/icon-arrow.png", alt="").btn-round__img
+    -} else if(openWindow === true){
+        button.btn-round&attributes(attributes)
+            |#{text}
+            span.btn-round__inner
+                |#{text}
+                img(src="img/icon-arrow.png", alt="").btn-round__img
+    -}
+mixin link(text, img)
+    a.btn-round.btn-round_link&attributes(attributes)
+        |#{text}
+        span.btn-round__inner
+            |#{text}
+            - if (img === true) {
+                img(src="img/icon-arrow.png", alt="").btn-round__img
+            - }

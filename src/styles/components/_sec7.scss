@@ -1,0 +1,70 @@
+.sec7 {
+    background-image: url("../img/sec7-bg.jpg");
+    margin-top: -50px;
+    padding: calc(16vw + 50px) 0 100px;
+
+    @include media(w1024) {
+        padding: calc(16vw + 40px) 0 70px;
+    }
+
+    @include media(w768) {
+        padding: calc(16vw + 30px) 0 0;
+    }
+
+    &__bg {
+        fill: white;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 16vw;
+    }
+    
+    &__subtitle {
+        @include border-bottom(currentColor);
+
+        @include media(w768) {
+            
+            &:after {
+                left: 0;
+                width: 100%;
+            }
+        }
+    }
+
+    &__row {
+        display: flex;
+
+        @include media(w1024) {
+            display: block;
+        }
+    }
+
+    &__col {
+        width: 50%;
+
+        @include media(w1024) {
+            width: auto;
+        }
+
+        @include media(w768) {
+            
+            br {
+                display: none;
+            }
+        }
+    }
+
+    &__title {
+
+        @include media(w1024) {
+            text-align: center;
+        }
+
+        @include media(w768) {
+            font-size: 30px;
+            text-align: left;
+            margin-bottom: 3em;
+        }
+    }
+}

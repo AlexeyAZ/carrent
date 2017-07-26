@@ -1,0 +1,13 @@
+.container {
+	margin-left: auto;
+    margin-right: auto;
+    padding-left: $container-side-padding-pc;
+    padding-right: $container-side-padding-pc; 
+    position: relative;
+    max-width: $content-max-width;
+
+    @include media(w1024) {
+        padding-left: $container-side-padding-tablet;
+        padding-right: $container-side-padding-tablet; 
+    }
+}

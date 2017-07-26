@@ -1,0 +1,100 @@
+@font-face {
+    font-family: "FiraSansCondensed";
+    src: url("../fonts/hinted-FiraSansCondensed/FiraSansCondensed-Light.eot");
+    src: url("../fonts/hinted-FiraSansCondensed/FiraSansCondensed-Light.eot?#iefix")format("embedded-opentype"),
+    url('../fonts/hinted-FiraSansCondensed/FiraSansCondensed-Light.woff2') format('woff2'),
+    url("../fonts/hinted-FiraSansCondensed/FiraSansCondensed-Light.woff") format("woff"),
+    url("../fonts/hinted-FiraSansCondensed/FiraSansCondensed-Light.ttf") format("truetype"),
+    url('../fonts/hinted-FiraSansCondensed/FiraSansCondensed-Light.svg#svgFontName') format('svg');
+    font-style: normal;
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Lobster";
+    src: url("../fonts/Lobster/Lobster-Regular.eot");
+    src: url("../fonts/Lobster/Lobster-Regular.eot?#iefix")format("embedded-opentype"),
+    url('../fonts/Lobster/Lobster-Regular.woff2') format('woff2'),
+    url("../fonts/Lobster/Lobster-Regular.woff") format("woff"),
+    url("../fonts/Lobster/Lobster-Regular.ttf") format("truetype"),
+    url('../fonts/Lobster/Lobster-Regular.svg#svgFontName') format('svg');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Pobeda";
+    src: url("../fonts/Pobeda/Pobeda-Bold.eot");
+    src: url("../fonts/Pobeda/Pobeda-Bold.eot?#iefix")format("embedded-opentype"),
+    url('../fonts/Pobeda/Pobeda-Bold.woff2') format('woff2'),
+    url("../fonts/Pobeda/Pobeda-Bold.woff") format("woff"),
+    url("../fonts/Pobeda/Pobeda-Bold.ttf") format("truetype"),
+    url('../fonts/Pobeda/Pobeda-Bold.svg#svgFontName') format('svg');
+    font-style: normal;
+    font-weight: bold;
+}
+@font-face {
+    font-family: "Pobeda";
+    src: url("../fonts/Pobeda/Pobeda-Regular.eot");
+    src: url("../fonts/Pobeda/Pobeda-Regular.eot?#iefix")format("embedded-opentype"),
+    url('../fonts/Pobeda/Pobeda-Regular.woff2') format('woff2'),
+    url("../fonts/Pobeda/Pobeda-Regular.woff") format("woff"),
+    url("../fonts/Pobeda/Pobeda-Regular.ttf") format("truetype"),
+    url('../fonts/Pobeda/Pobeda-Regular.svg#svgFontName') format('svg');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "PFHandBookPro";
+    src: url("../fonts/PFHandbookPro/PFHandbookPro-Black.eot");
+    src: url("../fonts/PFHandbookPro/PFHandbookPro-Black.eot?#iefix")format("embedded-opentype"),
+    url('../fonts/PFHandbookPro/PFHandbookPro-Black.woff2') format('woff2'),
+    url("../fonts/PFHandbookPro/PFHandbookPro-Black.woff") format("woff"),
+    url("../fonts/PFHandbookPro/PFHandbookPro-Black.ttf") format("truetype"),
+    url('../fonts/PFHandbookPro/PFHandbookPro-Black.svg#svgFontName') format('svg');
+    font-style: normal;
+    font-weight: 800;
+}
+@font-face {
+    font-family: "PFHandBookPro";
+    src: url("../fonts/PFHandbookPro/PFHandbookPro-Bold.eot");
+    src: url("../fonts/PFHandbookPro/PFHandbookPro-Bold.eot?#iefix")format("embedded-opentype"),
+    url('../fonts/PFHandbookPro/PFHandbookPro-Bold.woff2') format('woff2'),
+    url("../fonts/PFHandbookPro/PFHandbookPro-Bold.woff") format("woff"),
+    url("../fonts/PFHandbookPro/PFHandbookPro-Bold.ttf") format("truetype"),
+    url('../fonts/PFHandbookPro/PFHandbookPro-Bold.svg#svgFontName') format('svg');
+    font-style: normal;
+    font-weight: bold;
+}
+@font-face {
+    font-family: "PFHandBookPro";
+    src: url("../fonts/PFHandbookPro/PFHandbookPro-Italic.eot");
+    src: url("../fonts/PFHandbookPro/PFHandbookPro-Italic.eot?#iefix")format("embedded-opentype"),
+    url('../fonts/PFHandbookPro/PFHandbookPro-Italic.woff2') format('woff2'),
+    url("../fonts/PFHandbookPro/PFHandbookPro-Italic.woff") format("woff"),
+    url("../fonts/PFHandbookPro/PFHandbookPro-Italic.ttf") format("truetype"),
+    url('../fonts/PFHandbookPro/PFHandbookPro-Italic.svg#svgFontName') format('svg');
+    font-style: italic;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "PFHandBookPro";
+    src: url("../fonts/PFHandbookPro/PFHandbookPro-Regular.eot");
+    src: url("../fonts/PFHandbookPro/PFHandbookPro-Regular.eot?#iefix")format("embedded-opentype"),
+    url('../fonts/PFHandbookPro/PFHandbookPro-Regular.woff2') format('woff2'),
+    url("../fonts/PFHandbookPro/PFHandbookPro-Regular.woff") format("woff"),
+    url("../fonts/PFHandbookPro/PFHandbookPro-Regular.ttf") format("truetype"),
+    url('../fonts/PFHandbookPro/PFHandbookPro-Regular.svg#svgFontName') format('svg');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "PFHandBookPro";
+    src: url("../fonts/PFHandbookPro/PFHandbookPro-Thin.eot");
+    src: url("../fonts/PFHandbookPro/PFHandbookPro-Thin.eot?#iefix")format("embedded-opentype"),
+    url('../fonts/PFHandbookPro/PFHandbookPro-Thin.woff2') format('woff2'),
+    url("../fonts/PFHandbookPro/PFHandbookPro-Thin.woff") format("woff"),
+    url("../fonts/PFHandbookPro/PFHandbookPro-Thin.ttf") format("truetype"),
+    url('../fonts/PFHandbookPro/PFHandbookPro-Thin.svg#svgFontName') format('svg');
+    font-style: normal;
+    font-weight: 200;
+}

@@ -1,0 +1,25 @@
+a {
+    display: inline-block;
+    transition: $trans;
+
+    &:hover {
+        color: $main-red;
+    }
+}
+
+.link {
+    text-decoration: none;
+
+    &_getcall {
+        border-bottom: 2px dotted currentColor;
+        font-size: 25px;
+
+        @include media(w1024) {
+            font-size: 16px;
+        }
+
+        @include media(w768) {
+            font-size: 20px;
+        }
+    }
+}
